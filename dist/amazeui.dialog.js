@@ -1,4 +1,4 @@
-/*! amazeui-dialog v0.0.1 | by Amaze UI Team | (c) 2015 AllMobilize, Inc. | Licensed under MIT | 2015-08-14T11:09:17+0800 */ 
+/*! amazeui-dialog v0.0.2 | by Amaze UI Team | (c) 2016 AllMobilize, Inc. | Licensed under MIT | 2016-06-22T10:19:33+0800 */ 
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(_dereq_,module,exports){
 (function (global){
 /**
@@ -19,17 +19,21 @@ dialog.alert = function(options) {
   options.onConfirm = options.onConfirm || function() {
     };
   var html = [];
-  html.push('<div class="am-modal am-modal-alert " tabindex="-1" id="my-alert">');
-  html.push('<div class="am-modal-dialog radius">');
+  html.push('<div class="am-modal am-modal-alert" tabindex="-1">');
+  html.push('<div class="am-modal-dialog">');
   html.push('<div class="am-modal-hd">' + options.title + '</div>');
   html.push('<div class="am-modal-bd">' + options.content + '</div>');
   html.push('<div class="am-modal-footer"><span class="am-modal-btn">确定</span></div>');
   html.push('</div>');
   html.push('</div>');
-  return $(html.join('')).appendTo('body').modal().on('closed.modal.amui', function() {
-    $(this).remove();
-    options.onConfirm();
-  });
+
+  return $(html.join(''))
+    .appendTo('body')
+    .modal()
+    .on('closed.modal.amui', function() {
+      options.onConfirm();
+      $(this).remove();
+    });
 };
 
 dialog.confirm = function(options) {
@@ -79,9 +83,10 @@ dialog.loading = function(options) {
   html.push('</div>');
   html.push('</div>');
 
-  return $(html.join('')).appendTo('body').modal().on('closed.modal.amui', function() {
-    $(this).remove();
-  });
+  return $(html.join('')).appendTo('body').modal()
+    .on('closed.modal.amui', function() {
+      $(this).remove();
+    });
 };
 
 dialog.actions = function(options) {
@@ -139,10 +144,11 @@ dialog.popup = function(options) {
   html.push('<div class="am-popup-bd">' + options.content + '</div>');
   html.push('</div> ');
   html.push('</div>');
-  return $(html.join('')).appendTo('body').modal().on('closed.modal.amui', function() {
-    $(this).remove();
-    options.onClose();
-  });
+  return $(html.join('')).appendTo('body').modal()
+    .on('closed.modal.amui', function() {
+      $(this).remove();
+      options.onClose();
+    });
 };
 
 module.exports = UI.dialog = dialog;

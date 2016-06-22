@@ -1,6 +1,6 @@
 {
   "name": "amazeui-dialog",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Modal with HTML template.",
   "main": "lib/amazeui.dialog.js",
   "style": "dist/amazeui.dialog.css",
@@ -28,16 +28,16 @@
   "homepage": "https://github.com/amazeui/dialog",
   "license": "MIT",
   "devDependencies": {
-    "amazeui-doc-util": "latest",
+    "amazeui-doc-util": "^0.6.0",
     "amazeui-gulp-tasks": "latest",
-    "browserify": "^10.2.4",
-    "browserify-shim": "^3.8.8",
-    "gulp": "^3.9.0",
-    "gulp-load-plugins": "^0.8.0",
-    "run-sequence": "^1.0.2"
+    "browserify": "^13.0.1",
+    "browserify-shim": "^3.8.12",
+    "gulp": "^3.9.1",
+    "gulp-load-plugins": "^1.2.4",
+    "run-sequence": "^1.2.1"
   },
   "dependencies": {
-    "amazeui": "^2.4.0",
+    "amazeui": "^2.7.0",
     "jquery": "^2.1.4"
   },
   "browserify-shim": {
