@@ -1,9 +1,8 @@
 {
   "name": "amazeui-dialog",
-  "version": "0.0.2",
-  "description": "Modal with HTML template.",
+  "version": "0.0.3",
+  "description": "Amaze UI Modal 模板封装。",
   "main": "lib/amazeui.dialog.js",
-  "style": "dist/amazeui.dialog.css",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -25,7 +24,7 @@
   "bugs": {
     "url": "https://github.com/amazeui/dialog/issues"
   },
-  "homepage": "https://github.com/amazeui/dialog",
+  "homepage": "http://amazeui.github.io/dialog",
   "license": "MIT",
   "devDependencies": {
     "amazeui-doc-util": "^0.6.0",
