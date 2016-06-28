@@ -27,7 +27,7 @@
   "homepage": "http://amazeui.github.io/dialog",
   "license": "MIT",
   "devDependencies": {
-    "amazeui-doc-util": "^0.6.0",
+    "amazeui-doc-util": "^0.7.1",
     "amazeui-gulp-tasks": "latest",
     "browserify": "^13.0.1",
     "browserify-shim": "^3.8.12",
